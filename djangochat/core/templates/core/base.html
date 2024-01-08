@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block title %}{% endblock %} Djangochat</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-teal-600">
+    {% load static %}
+    <nav class="flex items-center justify-between px-4 py-6 bg-teal-800">
+      <div>
+        <a href="/" class="text-xl text-white">Djangochat</a>
+      </div>
+      <div class="flex item-center space-x-4">
+        <a href="/login/" class="px-5 py-3 text-white hover:text-gray-500"
+          >Log in</a
+        >
+        <a
+          href="/signup/"
+          class="px-5 py-3 rounded-xl text-white bg-teal-600 hover:bg-teal-700"
+          >Sign up</a
+        >
+      </div>
+    </nav>
+    <div>{% block content %}{% endblock %}</div>
+  </body>
+</html>
